@@ -1,0 +1,155 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{% static 'courses/css/common.css' %}">
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f2f5;
+        color: #333;
+      }
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .navbar-dark .navbar-nav .nav-link {
+        color: #fff;
+        transition: color 0.3s;
+      }
+      .navbar-dark .navbar-nav .nav-link:hover {
+        color: #f8d210;
+      }
+      .hero-section {
+        background: linear-gradient(to right, #f8d210, #fdc830);
+        color: white;
+        padding: 100px 0;
+      }
+      .card-animated {
+        transition: transform 0.3s;
+      }
+      .card-animated:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .price {
+        font-size: 1.2rem;
+        color: #ff6f61;
+      }
+      footer {
+        background: linear-gradient(145deg, #343a40, #3e464d);
+        color: white;
+        padding: 50px 0;
+        font-size: 0.9rem;
+      }
+      footer h5 {
+        color: #f8d210;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      footer p {
+        color: #ccc;
+        font-size: 1rem;
+      }
+      footer a {
+        color: #f8d210;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      footer a:hover {
+        color: #f8f9fa;
+        text-decoration: underline;
+      }
+      .footer-bottom {
+        background-color: #2d3238;
+        color: #999;
+        padding: 10px 0;
+        font-size: 0.8rem;
+      }
+    </style>
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">EduSite</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="/my-courses">My Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Signup</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>About Us</h5>
+            <p>We provide the best educational courses online.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="/about">About</a></li>
+              <li><a href="/courses">Courses</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Contact Us</h5>
+            <p>Email: info@edusite.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container text-center">
+          &copy; 2024 EduSite. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    {% block js %}{% endblock %}
+  </body>
+</html>

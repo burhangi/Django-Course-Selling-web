@@ -1,0 +1,295 @@
+{% extends 'courses/base.html' %}
+{% load course_custom_tags %}
+
+{% block title %}
+Courses
+{% endblock %}
+
+{% block content %}
+
+<style>
+    /* Global CSS styles */
+    .price {
+        font-size: 20px;
+    }
+
+    .card-animated {
+        background-color: #fff;
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .card-animated:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-animated:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+        z-index: -1;
+        border-radius: 20px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .card-animated:hover:before {
+        opacity: 1;
+        /* background: linear-gradient(to right, #abade0, #8f94fb); */
+    }
+
+    .card-animated .card-body {
+        padding: 5px;
+    }
+
+    .card-animated .card-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .card-animated .card-text {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .hero-section {
+        background: linear-gradient(to right, #4e54c8, #8f94fb);
+        color: #fff;
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .hero-section p {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .hero-section .btn-primary {
+        background-color: #f8d210;
+        border-color: #f8d210;
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+
+    .hero-section .btn-primary:hover {
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .motion-button {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .motion-button button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+
+    .motion-button button:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<div class="hero-section text-center animate__animated animate__fadeIn">
+    <div class="container">
+        <h1 class="display-4">Welcome to EduSite</h1>
+        <p class="lead">Your journey to knowledge starts here</p>
+        <a href="#courses" class="btn btn-primary btn-lg">Explore Courses</a>
+    </div>
+</div>
+
+<div class="container mt-5" id="about">
+    <h2 class="text-center mb-4">About Us</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card card-animated shadow p-3 mb-5 bg-white rounded-3d">
+                <div class="card-body">
+                    <h5 class="card-title">Our Mission</h5>
+                    <p class="card-text">We aim to provide the best educational resources online to help you achieve your learning goals.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card card-animated shadow p-3 mb-5 bg-white rounded-3d">
+                <div class="card-body">
+                    <h5 class="card-title">Our Vision</h5>
+                    <p class="card-text">To become the leading platform for online education, empowering learners around the globe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5" id="courses">
+    <h2 class="text-center mb-4">Our Courses</h2>
+    <div class="row">
+        {% for course in courses %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card card-animated shadow p-3 mb-5 bg-white rounded-3">
+                <img class="card-img-top" src="{{ course.thumbnail.url }}" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.name }}</h5>
+                    <p class="card-text">Save {{ course.discount }}%</p>
+                    <p class="price">
+                        <del>${{ course.price }}</del>
+                        <span>${{ course.discounted_price }}</span>
+                    </p>
+                    <div class="rating-stars">
+                        <!-- Replace with your actual rating generation logic -->
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        {% is_enrolled request course as enrolled %}
+                        {% if enrolled %}
+                        <a href="/course/{{ course.slug }}" class="btn btn-primary">Start Course</a>
+                        {% else %}
+                        <a href="/check-out/{{ course.slug }}" class="btn btn-primary">Enroll Now</a>
+                        <a href="/course/{{ course.slug }}" class="btn btn-secondary">Show More</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="container mt-5" id="contact">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card card-animated shadow p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Get in Touch</h5>
+                    <p class="card-text">Email us at <a href="burhanuldin077@gmail.com">burhanuldin077@gmail.com</a> or call us  at  <br> 03456814624.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card card-animated shadow p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Follow Us</h5>
+                    <p class="card-text">Stay updated with our latest courses and news on our social media channels.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="motion-button text-center">
+    <!-- Framer Motion Animation Example -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/4.1.17/framer-motion.min.js"></script>
+    <script>
+        // Example of Framer Motion button animation
+        const MotionButton = motion.button;
+        function App() {
+            return (
+                React.createElement(MotionButton, {
+                    whileHover: { scale: 1.2 },
+                    whileTap: { scale: 0.8 }
+                }, "Hover Me")
+            );
+        }
+    </script>
+</div>
+
+<!-- GSAP Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+<script>
+    gsap.from(".hero-section h1", { duration: 2, y: -50, opacity: 0, ease: "bounce" });
+    gsap.from(".hero-section p", { duration: 2, x: -50, opacity: 0, ease: "elastic" });
+    gsap.from(".btn-primary", { duration: 1.5, scale: 0.5, opacity: 0, ease: "back" });
+</script>
+
+<!-- AOS Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+</script>
+
+<!-- Mo.js Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mojs/0.288.4/mo.min.js"></script>
+<script>
+    const burst = new mojs.Burst({
+        radius: { 0: 100 },
+        count: 20,
+        children: {
+            shape: 'polygon',
+            radius: 20,
+            duration: 2000,
+        }
+    });
+
+    document.querySelector('.btn-primary').addEventListener('mouseenter', () => {
+        burst.replay();
+    });
+</script>
+
+<!-- Anime.js Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: '.animated-text',
+        rotateY: 360,
+        duration: 2000,
+        loop: true,
+        easing: 'easeInOutSine'
+    });
+</script>
+
+<!-- ScrollMagic Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollMagic.min.js"></script>
+<script>
+    var controller = new ScrollMagic.Controller();
+    var scene1 = new ScrollMagic.Scene({
+        triggerElement: "#about",
+        duration: 300
+    })
+    .setTween(".animated-text", { scale: 1.5 }) // trigger a TweenMax.to tween
+    .addTo(controller);
+</script>
+
+<!-- Three.js Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+  
+
+    function animate() {
+        requestAnimationFrame(animate);
+        sphere.rotation.x += 0.01;
+        sphere.rotation.y += 0.01;
+        renderer.render(scene, camera);
+    }
+    animate();
+</script>
+
+{% endblock %}
