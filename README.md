@@ -1,6 +1,6 @@
 # **EduSite** 🌐
 
-<img src="https://via.placeholder.com/150x100.png?text=EduSite+Professional+Image" alt="EduSite Professional Image" width="150" height="100" />
+<img src="https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(10?text=EduSite+Professional+Image" alt="EduSite Professional Image" width="150" height="100" />
 
 ### **EduSite** is a modern educational platform designed to offer effective online learning solutions. It provides a user-friendly interface with features for managing users, courses, and learning materials. EduSite also includes an integrated payment system for easy and transparent transactions.
 
