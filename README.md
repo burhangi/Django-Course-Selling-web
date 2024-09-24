@@ -81,7 +81,6 @@ On the left side of the screen, you can manage all user information, modify user
  <div style="flex: 50%;">
     <img src="https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(127).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
 </div>
-
 </div>
 
 ---
@@ -99,7 +98,6 @@ On the left side of the screen, you can manage all user information, modify user
  <div style="flex: 50%;">
     <img src="https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(130).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
 </div>
-
 </div>
 
 
