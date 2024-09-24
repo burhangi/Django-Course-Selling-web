@@ -40,7 +40,7 @@ On the left side of the screen, you can manage all user information, modify user
         </ul>
     </div>
     <div style="flex: 50%;">
-        ![Admin Panel Image](https://via.placeholder.com/250x150.png?text=Admin+Panel+Image) <!-- Replace with actual image link -->
+        ![Admin Panel Image](https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(119).png) <!-- Replace with actual image link -->
     </div>
 </div>
 
