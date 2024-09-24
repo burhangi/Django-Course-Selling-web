@@ -77,7 +77,7 @@ On the left side of the screen, you can manage all user information, modify user
         </ul>
     </div>
     <div style="flex: 50%;">
-        ![Pricing Image](https://via.placeholder.com/250x150.png?text=Pricing+Plan+Image) <!-- Replace with actual image link -->
+        ![Pricing Image](https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(122).png?text=Pricing+Plan+Image) <!-- Replace with actual image link -->
     </div>
 </div>
 
