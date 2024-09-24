@@ -89,7 +89,7 @@ On the left side of the screen, you can manage all user information, modify user
 
 <div style="display: flex;">
     <div style="flex: 50%;">
-        ![Payment Image](https://via.placeholder.com/250x150.png?text=Payment+Details+Image) <!-- Replace with actual image link -->
+        ![Payment Image](https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(130).png?text=Payment+Details+Image) <!-- Replace with actual image link -->
     </div>
     <div style="flex: 50%; padding-left: 20px;">
         <ul>
