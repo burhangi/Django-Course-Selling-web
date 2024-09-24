@@ -45,7 +45,8 @@ On the left side of the screen, you can manage all user information, modify user
 
 </div>
 
----## 📚 **Effective Learning Features** 🧠
+---
+### 📚 **Effective Learning Features** 🧠
 
 <div style="display: flex; flex-wrap: wrap;">
     <div style="flex: 50%; padding-left: 20px;">
@@ -83,21 +84,22 @@ On the left side of the screen, you can manage all user information, modify user
 
 </div>
 
----## 💳 **Payment Details** 💵
+---
+## 💳 **Payment Details** 💵
 
-<div style="display: flex; align-items: center;">
 
+<div style="display: flex;">
     <div style="flex: 50%; padding-right: 20px;">
         <ul>
-            <li>💳 <strong>Easy Payment Method</strong></li>
+            <li>💳 <strong>Easy Payment Method</strong>*</li>
             <li>✔️ <strong>Check Payment Status</strong></li>
+           
         </ul>
     </div>
-  
-    <div style="flex: 50%; padding-left: 20px;">
-        <img src="https://raw.githubusercontent.com/burhangi/Django-Course-Selling-web/main/Screenshot%20(130).png" alt="Payment Details" style="width: 100%; height: auto;"/>
-    </div>
-    
+ <div style="flex: 50%;">
+    <img src="https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(130).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
+</div>
+
 </div>
 
 
