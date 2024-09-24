@@ -45,13 +45,13 @@ On the left side of the screen, you can manage all user information, modify user
 
 </div>
 
----
-## 📚 **Effective Learning Features** 🧠
+---## 📚 **Effective Learning Features** 🧠
 
 <div style="display: flex; flex-wrap: wrap;">
     <div style="flex: 50%; padding-left: 20px;">
         <ul>
             <li>✔️ **Recorded Courses**</li>
+            <li>🖥️ **Join Live Sessions**</li>
             <li>📩 **Request for Required Course**</li>
             <li>🎓 **All-in-One Solution**</li>
             <li>💡 **FAQs for Guidance**</li>
@@ -62,7 +62,7 @@ On the left side of the screen, you can manage all user information, modify user
     </div>
 
     <div style="flex: 50%; padding-left: 20px;">
-        <img src="https://raw.githubusercontent.com/burhangi/Django-Course-Selling-web/main/Screenshot%20(122).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
+        <img src="https://raw.githubusercontent.com/burhangi/Django-Course-Selling-web/main/Screenshot%20(122).png?raw=true" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
     </div>
 </div>
 
