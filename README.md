@@ -50,9 +50,10 @@ On the left side of the screen, you can manage all user information, modify user
 ## 📚 **Effective Learning Features** 🧠
 
 <div style="display: flex;">
-    <div style="flex: 50%;">
-        ![Effective Learning Image](https://via.placeholder.com/250x150.png?text=Effective+Learning+Image) <!-- Replace with actual image link -->
-    </div>
+   <div style="flex: 50%;">
+    <img src="https://raw.githubusercontent.com/burhangi/Django-Course-Selling-web/main/Screenshot%20(122).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
+</div>
+
     <div style="flex: 50%; padding-left: 20px;">
         <ul>
             <li>✔️ **Recorded Courses**</li>
