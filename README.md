@@ -88,15 +88,16 @@ On the left side of the screen, you can manage all user information, modify user
 ## 💳 **Payment Details** 💵
 
 <div style="display: flex;">
-    <div style="flex: 50%;">
-        ![Payment Image](https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(130).png?text=Payment+Details+Image) <!-- Replace with actual image link -->
-    </div>
+  
     <div style="flex: 50%; padding-left: 20px;">
         <ul>
             <li>💳 **Easy Payment Method**</li>
             <li>✔️ **Check Payment Status**</li>
         </ul>
     </div>
+     <div style="flex: 50%;">
+    <img src="https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(130).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
+</div>
 </div>
 
 ---
