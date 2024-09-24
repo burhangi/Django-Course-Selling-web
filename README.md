@@ -39,9 +39,10 @@ On the left side of the screen, you can manage all user information, modify user
             <li>⭐ **Top Courses**</li>
         </ul>
     </div>
-    <div style="flex: 50%;">
-        ![Admin Panel Image](https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(119).png) <!-- Replace with actual image link -->
-    </div>
+  <div style="flex: 50%;">
+    <img src="https://raw.githubusercontent.com/burhangi/Django-Course-Selling-web/main/Screenshot%20(119).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
+</div>
+
 </div>
 
 ---
