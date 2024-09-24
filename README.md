@@ -76,9 +76,10 @@ On the left side of the screen, you can manage all user information, modify user
             <li>🎁 **Bonus Percentage with Razorpay Payment Integration**</li>
         </ul>
     </div>
-    <div style="flex: 50%;">
-        ![Pricing Image](https://github.com/burhangi/Django-Course-Selling-web/blob/main/Screenshot%20(122).png?text=Pricing+Plan+Image) <!-- Replace with actual image link -->
-    </div>
+ <div style="flex: 50%;">
+    <img src="https://raw.githubusercontent.com/burhangi/Django-Course-Selling-web/main/Screenshot%20(122).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
+</div>
+
 </div>
 
 ---
