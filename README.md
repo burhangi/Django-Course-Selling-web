@@ -61,9 +61,10 @@ On the left side of the screen, you can manage all user information, modify user
         </ul>
     </div>
 
-    <div style="flex: 50%; padding-left: 20px;">
-        <img src="https://raw.githubusercontent.com/burhangi/Django-Course-Selling-web/main/Screenshot%20(122).png?raw=true" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
-    </div>
+   <div style="flex: 50%;">
+    <img src="https://raw.githubusercontent.com/burhangi/Django-Course-Selling-web/main/Screenshot%20(122).png" alt="Admin Panel Image" style="width: 100%; height: auto;"/>
+</div>
+    
 </div>
 
 ## 💰 **Best Pricing Plans** 💸
